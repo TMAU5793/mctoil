@@ -6,8 +6,9 @@ class Landing extends BaseController
 {
 	public function index()
 	{
-		return view('landing/header');
-      return view('landing/landing');
-      return view('landing/footer');
+		echo view('landing/header');
+		echo view('layouts/navbar');
+      echo view('landing/landing');
+      echo view('landing/footer');
 	}
 }

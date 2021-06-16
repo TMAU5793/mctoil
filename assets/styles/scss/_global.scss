@@ -1,3 +1,11 @@
+$ff-bold: "DBAdmanX-Blod";
+$ff-regular: "DBAdmanX";
+$ff-light: "DBAdmanX-Light";
+$c-pink: #ef476a;
+$c-orange: #ff8a00;
+$c-white: #ffffff;
+$c-black: #000000;
+$c-gray-black: #565656;
 @mixin media-min($length) {
     @media (min-width: $length) {
         @content;
@@ -8,4 +16,50 @@
     @media (max-width: $length) {
         @content;
     }
+}
+
+html,
+body {
+    font-family: $ff-regular;
+}
+
+img {
+    width: 100%;
+}
+
+.ff-bold {
+    font-family: $ff-bold;
+}
+
+.ff-light {
+    font-family: $ff-light;
+}
+
+.c-orange {
+    color: $c-orange;
+}
+
+.c-pink {
+    color: $c-pink;
+}
+
+.c-gray-black {
+    color: $c-gray-black;
+}
+
+p,
+span,
+strong,
+input,
+select,
+textarea,
+button,
+a,
+ul {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+
+.max-w-400 {
+    max-width: 400px;
 }

@@ -1,0 +1,26 @@
+section.banner {
+    .banner-text {
+        left: 0;
+        right: 0;
+    }
+    .mct-oil-logo {
+        img {
+            max-width: 390px;
+        }
+    }
+    .banner-discount {
+        img {
+            max-width: 200px;
+        }
+    }
+}
+
+section.mct-vdo {
+    background: linear-gradient(180deg, $c-pink 150px, rgba(0, 0, 0, 0) 150px);
+    .vdo-body {
+        img {
+            max-width: 600px;
+            margin: auto;
+        }
+    }
+}

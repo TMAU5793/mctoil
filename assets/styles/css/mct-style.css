@@ -1,3 +1,64 @@
+html,
+body {
+  font-family: "DBAdmanX"; }
 
+img {
+  width: 100%; }
+
+.ff-bold {
+  font-family: "DBAdmanX-Blod"; }
+
+.ff-light {
+  font-family: "DBAdmanX-Light"; }
+
+.c-orange {
+  color: #ff8a00; }
+
+.c-pink {
+  color: #ef476a; }
+
+.c-gray-black {
+  color: #565656; }
+
+p,
+span,
+strong,
+input,
+select,
+textarea,
+button,
+a,
+ul {
+  font-size: 1.4rem;
+  line-height: 1.6rem; }
+
+.max-w-400 {
+  max-width: 400px; }
+
+.navbar {
+  padding: 1.5rem 0; }
+  .navbar .navbar-brand .position-absolute {
+    top: 0;
+    z-index: 999; }
+  .navbar .navbar-brand img {
+    max-width: 120px; }
+  .navbar .head-social i {
+    color: #ef476a;
+    font-size: 1.5rem;
+    padding-left: 1rem; }
+
+section.banner .banner-text {
+  left: 0;
+  right: 0; }
+section.banner .mct-oil-logo img {
+  max-width: 390px; }
+section.banner .banner-discount img {
+  max-width: 200px; }
+
+section.mct-vdo {
+  background: linear-gradient(180deg, #ef476a 150px, rgba(0, 0, 0, 0) 150px); }
+  section.mct-vdo .vdo-body img {
+    max-width: 600px;
+    margin: auto; }
 
 /*# sourceMappingURL=mct-style.css.map */
