@@ -18,6 +18,12 @@ $c-gray-black: #565656;
     }
 }
 
+@mixin line-pink($w) {
+    height: 2px;
+    width: $w;
+    background-color: $c-pink;
+}
+
 html,
 body {
     font-family: $ff-regular;
@@ -62,4 +68,25 @@ ul {
 
 .max-w-400 {
     max-width: 400px;
+}
+
+.text-space-4px {
+    letter-spacing: 4px;
+}
+
+.line-pink-30 {
+    @include line-pink(30px);
+}
+
+.mtb-1rem {
+    margin: 1rem 0;
+}
+
+.mtb-1rem-auto {
+    margin: 1rem auto;
+}
+
+.pink-gd {
+    background: rgb(179, 16, 50);
+    background: linear-gradient(3deg, rgba(179, 16, 50, 1) 0%, rgba(239, 77, 110, 1) 100%);
 }

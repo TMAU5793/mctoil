@@ -17,3 +17,13 @@
         }
     }
 }
+
+footer {
+    background-color: $c-pink;
+    padding: 1rem;
+    text-align: center;
+    .ft-copyright {
+        padding-top: 3px;
+        display: block;
+    }
+}

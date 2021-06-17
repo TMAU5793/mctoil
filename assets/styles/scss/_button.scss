@@ -1,0 +1,17 @@
+.btn-discount {
+    img {
+        width: 200px;
+    }
+}
+
+.btn-benefit {
+    background-color: transparent;
+    border: 1px solid $c-white;
+    outline: none;
+    color: $c-white;
+    padding: 4px 6px 1px;
+    &:hover {
+        background-color: $c-white;
+        color: $c-black;
+    }
+}
