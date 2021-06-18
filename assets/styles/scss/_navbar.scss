@@ -1,5 +1,8 @@
 .navbar {
     padding: 1.5rem 0;
+    @include media-max(991px) {
+        padding: 1rem 0;
+    }
     .navbar-brand {
         .position-absolute {
             top: 0;
@@ -7,6 +10,11 @@
         }
         img {
             max-width: 120px;
+        }
+        @include media-max(991px) {
+            img {
+                max-width: 90px;
+            }
         }
     }
     .head-social {

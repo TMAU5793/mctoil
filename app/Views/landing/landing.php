@@ -408,6 +408,9 @@
                         <div class="form-icon"><img src="<?= base_url('assets/images/landing/i-input-mail.png'); ?>" alt="mct oil promotion"></div>
                         <input type="email" class="form-control" id="txt_email" name="txt_email" placeholder="อีเมล">
                      </div>
+                     <div class="input-group">
+                        <button type="submit" id="submit_discount" class="m-auto submit-discount text-space-4px">SUBMIT</button>
+                     </div>
                   </form>
                </div>
             </div>

@@ -7,10 +7,25 @@ section.banner {
         img {
             max-width: 390px;
         }
+        @include media-max(991px) {
+            img {
+                max-width: 300px;
+            }
+        }
     }
     .banner-discount {
         img {
             max-width: 200px;
+        }
+        @include media-max(991px) {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+    @include media-max(991px) {
+        .max-w-400 {
+            max-width: 330px;
         }
     }
 }
@@ -20,6 +35,9 @@ section.mct-vdo {
     background-position: 0 0, bottom left, bottom right;
     background-repeat: no-repeat;
     padding: 3rem 0;
+    @include media-max(1400px) {
+        background-size: 100%, 10%, 10%;
+    }
     .vdo-body {
         img {
             max-width: 600px;
@@ -46,6 +64,10 @@ section.mct-compare {
         background-size: cover;
         background-position: center top;
         padding-bottom: 3rem;
+        @include media-max(1400px) {
+            background-size: contain;
+            background-position: center bottom;
+        }
     }
     .compare-product {
         img {
@@ -57,6 +79,14 @@ section.mct-compare {
         width: 50px;
     }
     .compare-list {
+        @include media-max(991px) {
+            .col-md-6.pe-5 {
+                padding-right: 1.5rem !important;
+            }
+            .col-md-6.ps-5 {
+                padding-left: 1.5rem !important;
+            }
+        }
         ul {
             list-style: none;
             padding: 1.5rem;
@@ -121,8 +151,14 @@ section.mct-benefit {
     background-position: bottom left, bottom right;
     background-repeat: no-repeat;
     padding: 3rem 0;
+    @include media-max(1400px) {
+        background-size: 15%, 15%;
+    }
     .col-md-4 {
         padding: 0 2rem;
+        @include media-max(991px) {
+            padding: 0 1rem;
+        }
     }
     .benefit-body-img {
         .col-img {
@@ -160,6 +196,10 @@ section.mct-whyour {
         position: absolute;
         right: 0;
         bottom: -2rem;
+        @include media-max(1400px) {
+            bottom: -1rem;
+            background-size: 60%;
+        }
     }
     .whyour-body {
         .col-md-6 {
@@ -209,6 +249,7 @@ section.mct-review {
             p {
                 margin-bottom: 0;
                 font-size: 1.2rem;
+                line-height: 1.25rem;
             }
         }
     }
@@ -220,6 +261,13 @@ section.mct-review {
                 max-width: 234px;
                 margin: 0 auto 1rem;
             }
+            .col-desc {
+                p {
+                    margin-bottom: 0;
+                    font-size: 1.2rem;
+                    line-height: 1.25rem;
+                }
+            }
         }
     }
 }
@@ -230,15 +278,31 @@ section.mct-tiptrick {
     background-position: bottom center;
     padding: 3rem 0 0;
     .tiptrick-body {
+        .col-md-6 {
+            position: relative;
+        }
         .col-img {
             text-align: right;
             img {
                 max-width: 450px;
             }
+            @include media-max(991px) {
+                position: absolute;
+                bottom: 0;
+                right: 2rem;
+            }
         }
         .col-desc {
             .position-absolute {
                 left: 4rem;
+            }
+            @include media-max(991px) {
+                padding: 1.5rem 0 3rem;
+                .position-absolute {
+                    left: 2rem;
+                    position: relative !important;
+                    transform: none !important;
+                }
             }
         }
     }
@@ -260,6 +324,12 @@ section.mct-delivery {
                 margin-top: 1.5rem;
                 margin-bottom: 0;
             }
+            @include media-max(991px) {
+                padding: 0 1rem;
+                img {
+                    max-width: 80px;
+                }
+            }
         }
         .col-md-4:not(:last-child) {
             border-right: 1px solid $c-white;
@@ -268,24 +338,56 @@ section.mct-delivery {
 }
 
 section.mct-promotion {
+    background-color: #f5f5f5;
     background-image: url('../../images/landing/bg-promotion.jpg');
     background-repeat: no-repeat;
     background-position: bottom center;
     padding: 3rem 0 6rem;
+    @include media-max(1399px) {
+        background-size: contain;
+    }
     .promotion-body {
         background-color: $c-white;
         [class*='col-md-'] {
             padding: 0;
+            @include media-max(991px) {
+                width: 50%;
+            }
+        }
+        .col-md-4 {
+            .col-img {
+                @include media-max(1199px) {
+                    height: 100%;
+                    img {
+                        height: 100%;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+            }
         }
         .col-md-8 {
             background-image: url('../../images/landing/bg-form-right.png');
             background-repeat: no-repeat;
             background-position: center right;
+            background-size: contain;
+            @include media-max(991px) {
+                background-image: none;
+            }
             .col-form {
                 top: 50%;
                 transform: translateY(-49%);
                 width: 55%;
                 padding: 0 4rem;
+                @include media-max(1199px) {
+                    position: static !important;
+                    transform: none;
+                    padding: 3rem 1rem 3rem 4rem;
+                }
+                @include media-max(991px) {
+                    width: auto;
+                    padding: 2rem;
+                }
                 form {
                     .form-control {
                         font-size: 1.25rem;
@@ -299,7 +401,7 @@ section.mct-promotion {
                             z-index: 99;
                         }
                     }
-                    .input-group:not(last-child) {
+                    .input-group:not(:last-child) {
                         margin-bottom: 1rem;
                     }
                     input,

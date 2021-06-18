@@ -2,6 +2,11 @@
     img {
         width: 200px;
     }
+    @include media-max(991px) {
+        img {
+            width: 150px;
+        }
+    }
 }
 
 .btn-benefit {
@@ -14,4 +19,11 @@
         background-color: $c-white;
         color: $c-black;
     }
+}
+
+.submit-discount {
+    background-color: $c-pink;
+    border: none;
+    color: $c-white;
+    padding: 6px 1.5rem 3px;
 }

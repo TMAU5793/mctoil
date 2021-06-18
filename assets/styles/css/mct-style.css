@@ -55,11 +55,17 @@ ul {
 
 .navbar {
   padding: 1.5rem 0; }
+  @media (max-width: 991px) {
+    .navbar {
+      padding: 1rem 0; } }
   .navbar .navbar-brand .position-absolute {
     top: 0;
     z-index: 999; }
   .navbar .navbar-brand img {
     max-width: 120px; }
+  @media (max-width: 991px) {
+    .navbar .navbar-brand img {
+      max-width: 90px; } }
   .navbar .head-social i {
     color: #ef476a;
     font-size: 1.5rem;
@@ -75,6 +81,9 @@ footer {
 
 .btn-discount img {
   width: 200px; }
+@media (max-width: 991px) {
+  .btn-discount img {
+    width: 150px; } }
 
 .btn-benefit {
   background-color: transparent;
@@ -86,19 +95,37 @@ footer {
     background-color: #ffffff;
     color: #000000; }
 
+.submit-discount {
+  background-color: #ef476a;
+  border: none;
+  color: #ffffff;
+  padding: 6px 1.5rem 3px; }
+
 section.banner .banner-text {
   left: 0;
   right: 0; }
 section.banner .mct-oil-logo img {
   max-width: 390px; }
+@media (max-width: 991px) {
+  section.banner .mct-oil-logo img {
+    max-width: 300px; } }
 section.banner .banner-discount img {
   max-width: 200px; }
+@media (max-width: 991px) {
+  section.banner .banner-discount img {
+    max-width: 150px; } }
+@media (max-width: 991px) {
+  section.banner .max-w-400 {
+    max-width: 330px; } }
 
 section.mct-vdo {
   background: linear-gradient(180deg, #ef476a 150px, rgba(0, 0, 0, 0) 150px), url("../../images/landing/bg-vdo-left.png"), url("../../images/landing/bg-vdo-right.png");
   background-position: 0 0, bottom left, bottom right;
   background-repeat: no-repeat;
   padding: 3rem 0; }
+  @media (max-width: 1400px) {
+    section.mct-vdo {
+      background-size: 100%, 10%, 10%; } }
   section.mct-vdo .vdo-body img {
     max-width: 600px;
     margin: auto;
@@ -116,11 +143,20 @@ section.mct-compare {
     background-size: cover;
     background-position: center top;
     padding-bottom: 3rem; }
+    @media (max-width: 1400px) {
+      section.mct-compare .compare-body {
+        background-size: contain;
+        background-position: center bottom; } }
   section.mct-compare .compare-product img {
     max-width: 100px;
     margin: 1.5rem 3rem; }
   section.mct-compare .compare-vs {
     width: 50px; }
+  @media (max-width: 991px) {
+    section.mct-compare .compare-list .col-md-6.pe-5 {
+      padding-right: 1.5rem !important; }
+    section.mct-compare .compare-list .col-md-6.ps-5 {
+      padding-left: 1.5rem !important; } }
   section.mct-compare .compare-list ul {
     list-style: none;
     padding: 1.5rem;
@@ -170,8 +206,14 @@ section.mct-benefit {
   background-position: bottom left, bottom right;
   background-repeat: no-repeat;
   padding: 3rem 0; }
+  @media (max-width: 1400px) {
+    section.mct-benefit {
+      background-size: 15%, 15%; } }
   section.mct-benefit .col-md-4 {
     padding: 0 2rem; }
+    @media (max-width: 991px) {
+      section.mct-benefit .col-md-4 {
+        padding: 0 1rem; } }
   section.mct-benefit .benefit-body-img .col-img {
     position: relative; }
     section.mct-benefit .benefit-body-img .col-img .btn-benefit {
@@ -199,6 +241,10 @@ section.mct-whyour {
     position: absolute;
     right: 0;
     bottom: -2rem; }
+    @media (max-width: 1400px) {
+      section.mct-whyour::after {
+        bottom: -1rem;
+        background-size: 60%; } }
   section.mct-whyour .whyour-body .col-md-6 {
     margin-top: 1.5rem; }
     section.mct-whyour .whyour-body .col-md-6 .col-body h4 {
@@ -233,25 +279,44 @@ section.mct-review {
     padding: 1.5rem; }
     section.mct-review .vdo-review .col-desc p {
       margin-bottom: 0;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      line-height: 1.25rem; }
   section.mct-review .people-review .col-body {
     background-color: #ffffff;
     padding: 1.5rem 2rem; }
     section.mct-review .people-review .col-body .col-img {
       max-width: 234px;
       margin: 0 auto 1rem; }
+    section.mct-review .people-review .col-body .col-desc p {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      line-height: 1.25rem; }
 
 section.mct-tiptrick {
   background-image: url("../../images/landing/bg-tiptrick.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   padding: 3rem 0 0; }
+  section.mct-tiptrick .tiptrick-body .col-md-6 {
+    position: relative; }
   section.mct-tiptrick .tiptrick-body .col-img {
     text-align: right; }
     section.mct-tiptrick .tiptrick-body .col-img img {
       max-width: 450px; }
+    @media (max-width: 991px) {
+      section.mct-tiptrick .tiptrick-body .col-img {
+        position: absolute;
+        bottom: 0;
+        right: 2rem; } }
   section.mct-tiptrick .tiptrick-body .col-desc .position-absolute {
     left: 4rem; }
+  @media (max-width: 991px) {
+    section.mct-tiptrick .tiptrick-body .col-desc {
+      padding: 1.5rem 0 3rem; }
+      section.mct-tiptrick .tiptrick-body .col-desc .position-absolute {
+        left: 2rem;
+        position: relative !important;
+        transform: none !important; } }
 
 section.mct-delivery {
   padding: 3rem 0; }
@@ -267,27 +332,59 @@ section.mct-delivery {
       section.mct-delivery .delivery-body .col-img p {
         margin-top: 1.5rem;
         margin-bottom: 0; }
+      @media (max-width: 991px) {
+        section.mct-delivery .delivery-body .col-img {
+          padding: 0 1rem; }
+          section.mct-delivery .delivery-body .col-img img {
+            max-width: 80px; } }
     section.mct-delivery .delivery-body .col-md-4:not(:last-child) {
       border-right: 1px solid #ffffff; }
 
 section.mct-promotion {
+  background-color: #f5f5f5;
   background-image: url("../../images/landing/bg-promotion.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   padding: 3rem 0 6rem; }
+  @media (max-width: 1399px) {
+    section.mct-promotion {
+      background-size: contain; } }
   section.mct-promotion .promotion-body {
     background-color: #ffffff; }
     section.mct-promotion .promotion-body [class*='col-md-'] {
       padding: 0; }
+      @media (max-width: 991px) {
+        section.mct-promotion .promotion-body [class*='col-md-'] {
+          width: 50%; } }
+    @media (max-width: 1199px) {
+      section.mct-promotion .promotion-body .col-md-4 .col-img {
+        height: 100%; }
+        section.mct-promotion .promotion-body .col-md-4 .col-img img {
+          height: 100%;
+          object-fit: contain;
+          object-position: center; } }
     section.mct-promotion .promotion-body .col-md-8 {
       background-image: url("../../images/landing/bg-form-right.png");
       background-repeat: no-repeat;
-      background-position: center right; }
+      background-position: center right;
+      background-size: contain; }
+      @media (max-width: 991px) {
+        section.mct-promotion .promotion-body .col-md-8 {
+          background-image: none; } }
       section.mct-promotion .promotion-body .col-md-8 .col-form {
         top: 50%;
         transform: translateY(-49%);
         width: 55%;
         padding: 0 4rem; }
+        @media (max-width: 1199px) {
+          section.mct-promotion .promotion-body .col-md-8 .col-form {
+            position: static !important;
+            transform: none;
+            padding: 3rem 1rem 3rem 4rem; } }
+        @media (max-width: 991px) {
+          section.mct-promotion .promotion-body .col-md-8 .col-form {
+            width: auto;
+            padding: 2rem; } }
         section.mct-promotion .promotion-body .col-md-8 .col-form form .form-control {
           font-size: 1.25rem; }
         section.mct-promotion .promotion-body .col-md-8 .col-form form .input-group {
@@ -297,7 +394,7 @@ section.mct-promotion {
             top: .55rem;
             left: .5rem;
             z-index: 99; }
-        section.mct-promotion .promotion-body .col-md-8 .col-form form .input-group:not(last-child) {
+        section.mct-promotion .promotion-body .col-md-8 .col-form form .input-group:not(:last-child) {
           margin-bottom: 1rem; }
         section.mct-promotion .promotion-body .col-md-8 .col-form form input,
         section.mct-promotion .promotion-body .col-md-8 .col-form form textarea {
