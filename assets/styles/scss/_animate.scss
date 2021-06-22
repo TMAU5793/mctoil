@@ -1,0 +1,68 @@
+.left-to-right {
+    position: relative;
+    animation-name: left-to-right;
+}
+
+@keyframes left-to-right {
+    0% {
+        left: -15rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.right-to-left {
+    position: relative;
+    animation-name: right-to-left;
+}
+
+@keyframes right-to-left {
+    0% {
+        right: -15rem;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+.animate-slow-show {
+    position: relative;
+    animation-name: animate-slow-show;
+}
+
+@keyframes animate-slow-show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-bnf-ltr {
+    position: relative;
+    animation-name: animate-bnf-ltr;
+}
+
+@keyframes animate-bnf-ltr {
+    0% {
+        left: -15rem;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+[id*="waypoint"] {
+    animation-duration: 1s;
+}
+
+.animate-slow-show,
+.animate-bnf-ltr {
+    animation-duration: 2s;
+}

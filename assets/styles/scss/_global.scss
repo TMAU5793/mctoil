@@ -29,6 +29,12 @@ body {
     font-family: $ff-regular;
 }
 
+.container {
+    @include media-max(576px) {
+        padding: 0 1.5rem;
+    }
+}
+
 img {
     width: 100%;
 }
@@ -89,4 +95,36 @@ ul {
 .pink-gd {
     background: rgb(179, 16, 50);
     background: linear-gradient(3deg, rgba(179, 16, 50, 1) 0%, rgba(239, 77, 110, 1) 100%);
+}
+
+.hide-767 {
+    display: block;
+    @include media-max(767px) {
+        display: none;
+    }
+}
+
+.show-767 {
+    display: none;
+    @include media-max(767px) {
+        display: block;
+    }
+}
+
+.hide-576 {
+    display: block;
+    @include media-max(576px) {
+        display: none;
+    }
+}
+
+.show-576 {
+    display: none;
+    @include media-max(576px) {
+        display: block;
+    }
+}
+
+.fw-600 {
+    font-weight: 600;
 }

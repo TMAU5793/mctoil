@@ -1,10 +1,11 @@
 <div class="mct-landing">
    <section class="banner position-relative">
       <div class="baner-img">
-         <img src="<?= base_url('assets/images/landing/banner.jpg'); ?>" alt="mct oil banner">
+         <img src="<?= base_url('assets/images/landing/banner.jpg'); ?>" alt="mct oil banner" class="hide-576">
+         <img src="<?= base_url('assets/images/landing/banner-mobile.jpg'); ?>" alt="mct oil banner" class="show-576">
       </div>
       <div class="container banner-text position-absolute top-50 translate-middle-y">
-         <div class="max-w-400">
+         <div class="max-w-400 invisible" id="waypoint1">
             <span class="fs-3 c-orange">R E J U V I S</span>
             <div class="mct-oil-logo mb-3">
                <img src="<?= base_url('assets/images/mct-oil-logo.png'); ?>" alt="mct oil logo">
@@ -18,21 +19,25 @@
    </section>
 
    <section class="mct-vdo">
-      <div class="container">
-         <div class="text-center vdo-body">
-            <img src="<?= base_url('assets/images/landing/vdo-thumbnail.jpg') ?>" alt="mct vdo">
-         </div>
-         <div class="row vdo-desc mt-4">
+      <div class="container">         
+         <div class="row vdo-desc">
+            <div class="col-12 mb-4">
+               <div class="text-center vdo-body">
+                  <img src="<?= base_url('assets/images/landing/vdo-thumbnail.jpg') ?>" alt="mct vdo">
+               </div>
+            </div>
             <div class="col-md-4">
-               <strong>REJUVIS MCT OIL</strong>
-               <strong>EMPOWER YOU</strong>
-               <strong>EMPOWER ENERGY.</strong>
-               <div class="line-pink-30 mtb-1rem"></div>
-               <p>เติมพลังงานสัมผัสความเปลี่ยนแปลงได้ด้วยตัวคุณ</p>
+               <div class="invisible" id="waypoint2">
+                  <strong>REJUVIS MCT OIL</strong>
+                  <strong>EMPOWER YOU</strong>
+                  <strong>EMPOWER ENERGY.</strong>
+                  <div class="line-pink-30 mtb-1rem"></div>
+                  <p>เติมพลังงานสัมผัสความเปลี่ยนแปลงได้ด้วยตัวคุณ</p>
+               </div>
             </div>
             <div class="col-md-8">
                <p>Rejuvis MCT Oil เกิดจากการสะกัดน้ำมันมะพร้าวออแกนิค 100% ที่คัดแยกนำเฉพาะ Capryilic acid C8 และ Capric acid C10 เท่านั้น และไม่มีส่วนผสมของน้ำมันปาล์ม เพื่อให้ได้คุณสมบัติที่ดีที่สุดกลายมาเป็น MCT Oil เพื่อให้ในทุกช่วงเวลาของคุณนำไขมันมาใช้เป็นพลังงานได้ดีขึ้นและมีประสิทธิภาพมากที่สุด ที่สำคัญไม่มีสารตกค้าง หรือสารโลหะหนักแต่อย่างใด จึงมั่นใจได้ว่าทุกหยดที่คุณดื่มปลอดภัยและสามารถบริโภคได้ทุกคน</p>
-               <div class="btn-discount text-end">
+               <div class="btn-discount text-end invisible" id="waypoint3">
                   <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
                </div>
             </div>
@@ -41,59 +46,64 @@
    </section>
 
    <section class="mct-compare">
-         <div class="container compare-head text-center">
-            <strong class="text-space-4px">HOW DOES IT COMPARE?</strong>
-            <div class="line-pink-30 mtb-1rem-auto"></div>
-            <span>เปรียบเทียบ Rejuvis MCT Oil กับ MCT Oil ทั่วไป</span>
-         </div>
-         <div class="compare-body">
-            <div class="container">
-               <div class="text-center">
-                  <div class="compare-product d-inline-flex">
-                     <div class="mct-product">
-                        <img src="<?= base_url('assets/images/landing/rejuvis-mct-oil.png'); ?>" alt="rejuvis mct oil">
-                     </div>
-                     <div class="compare-vs position-relative">
-                        <strong class="position-absolute top-50 start-50 translate-middle">V S</strong>
-                     </div>            
-                     <div class="normal-product">
+      <div class="container compare-head text-center">
+         <strong class="text-space-4px">HOW DOES IT COMPARE?</strong>
+         <div class="line-pink-30 mtb-1rem-auto"></div>
+         <span>เปรียบเทียบ Rejuvis MCT Oil กับ MCT Oil ทั่วไป</span>
+      </div>
+      <div class="compare-body">
+         <div class="container">
+            <div class="text-center bg-mobile-top">
+               <div class="compare-product d-inline-flex">
+                  <div class="mct-product invisible" id="waypoint4">
+                     <img src="<?= base_url('assets/images/landing/rejuvis-mct-oil.png'); ?>" alt="rejuvis mct oil">
+                  </div>
+                  <div class="compare-vs position-relative hide-767">
+                     <strong class="position-absolute top-50 start-50 translate-middle">V S</strong>
+                  </div>            
+                  <div class="normal-product invisible hide-767" id="waypoint5">
+                     <img src="<?= base_url('assets/images/landing/normal-mct-oil.png'); ?>" alt="rejuvis mct oil">
+                  </div>
+               </div>
+            </div>
+            <div class="row compare-list">
+               <div class="col-md-6 rejuvis-mct text-end pe-5">
+                  <div class="mct-box">
+                     <strong class="mct-box-title">REJUVIS MCT OIL</strong>
+                     <ul class="invisible slow-show">
+                        <li>มีเฉพาะไขมันดีส่วนสำคัญคือ. C8 และ C10</li>
+                        <li>ไม่มีกลิ่น ไม่มีสี</li>
+                        <li>เกิดจากการกลั่นน้ำมันมะพร้าว แบบออแกนิก 100% ไม่มีส่วนผสมของน้ำมันปาล์ม</li>
+                        <li>ใช้ขวดแก้วแบบ amber glass ที่ช่วยปกป้องคุณภาพของ MCT oil จากแสงยูวีไม่ทำให้คุณภาพของ MCT ลดลง</li>
+                        <li>100% recyclable เพราะของเราขวดแก้วจึงสามารถนำไปรีไซเคิลได้ และเป็นมิตรต่อสิ่งแวดล้อม</li>
+                        <li>ไม่มีสารโลหะหนัก จึงปลอดภัยต่อผู้บริโภค</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-6 normal-mct ps-5">
+                  <div class="text-center compare-product">         
+                     <div class="normal-product show-767">
                         <img src="<?= base_url('assets/images/landing/normal-mct-oil.png'); ?>" alt="rejuvis mct oil">
                      </div>
                   </div>
+                  <div class="mct-box">
+                     <strong class="mct-box-title">MCT OIL</strong>
+                     <ul class="invisible slow-show">
+                        <li>ใช้ขวดพลาสติก ซึ่งอาจทำให้คุณภาพของ MCT ด้อยลงตามชนิดของบรรจุภัณฑ์</li>
+                        <li>เกิดจากการกลั่นเอาส่วนสำคัญ เอา C6 C8 C10</li>
+                        <li>มี C12 เป็นกรดไขมันดี ไม่นิยมเพราะไปไม่สามารถเปลี่ยนเป็นพลังงานได้ทันที ยังต้องผ่านตับเพื่อย่อย</li>
+                        <li>มีส่วนผสมของน้ำมันปาล์ม</li>
+                     </ul>
+                  </div>
                </div>
-               <div class="row compare-list">
-                  <div class="col-md-6 rejuvis-mct text-end pe-5">
-                     <div class="mct-box">
-                        <strong class="mct-box-title">REJUVIS MCT OIL</strong>
-                        <ul>
-                           <li>มีเฉพาะไขมันดีส่วนสำคัญคือ. C8 และ C10</li>
-                           <li>ไม่มีกลิ่น ไม่มีสี</li>
-                           <li>เกิดจากการกลั่นน้ำมันมะพร้าว แบบออแกนิก 100% ไม่มีส่วนผสมของน้ำมันปาล์ม</li>
-                           <li>ใช้ขวดแก้วแบบ amber glass ที่ช่วยปกป้องคุณภาพของ MCT oil จากแสงยูวีไม่ทำให้คุณภาพของ MCT ลดลง</li>
-                           <li>100% recyclable เพราะของเราขวดแก้วจึงสามารถนำไปรีไซเคิลได้ และเป็นมิตรต่อสิ่งแวดล้อม</li>
-                           <li>ไม่มีสารโลหะหนัก จึงปลอดภัยต่อผู้บริโภค</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-md-6 normal-mct ps-5">
-                     <div class="mct-box">
-                        <strong class="mct-box-title">MCT OIL</strong>
-                        <ul>
-                           <li>ใช้ขวดพลาสติก ซึ่งอาจทำให้คุณภาพของ MCT ด้อยลงตามชนิดของบรรจุภัณฑ์</li>
-                           <li>เกิดจากการกลั่นเอาส่วนสำคัญ เอา C6 C8 C10</li>
-                           <li>มี C12 เป็นกรดไขมันดี ไม่นิยมเพราะไปไม่สามารถเปลี่ยนเป็นพลังงานได้ทันที ยังต้องผ่านตับเพื่อย่อย</li>
-                           <li>มีส่วนผสมของน้ำมันปาล์ม</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-12 mt-5">
-                     <div class="btn-discount text-center">
-                        <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
-                     </div>
+               <div class="col-12 mt-5">
+                  <div class="btn-discount text-center">
+                     <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
                   </div>
                </div>
             </div>
          </div>
+      </div>
    </section>
 
    <section class="mct-benefit">
@@ -104,21 +114,27 @@
          </div>
          <div class="row benefit-body-img mt-5">
             <div class="col-md-4">
-               <div class="col-img">
-                  <img src="<?= base_url('assets/images/landing/benefit-1.jpg'); ?>" alt="rejuvis mct benefit">
-                  <button class="btn-benefit text-uppercase text-space-4px">GET STRONGER</button>
+               <div class="overflow-hidden">
+                  <div class="col-img invisible bnf-ltr">
+                     <img src="<?= base_url('assets/images/landing/benefit-1.jpg'); ?>" alt="rejuvis mct benefit">
+                     <button class="btn-benefit text-uppercase text-space-4px">GET STRONGER</button>
+                  </div>
                </div>
             </div>
             <div class="col-md-4">
-               <div class="col-img">
-                  <img src="<?= base_url('assets/images/landing/benefit-2.jpg'); ?>" alt="rejuvis mct benefit">
-                  <button class="btn-benefit text-uppercase text-space-4px">EAT SMARTER</button>
+               <div class="overflow-hidden">
+                  <div class="col-img invisible bnf-ltr">
+                     <img src="<?= base_url('assets/images/landing/benefit-2.jpg'); ?>" alt="rejuvis mct benefit">
+                     <button class="btn-benefit text-uppercase text-space-4px">EAT SMARTER</button>
+                  </div>
                </div>
             </div>
             <div class="col-md-4">
-               <div class="col-img">
-                  <img src="<?= base_url('assets/images/landing/benefit-3.jpg'); ?>" alt="rejuvis mct benefit">
-                  <button class="btn-benefit text-uppercase text-space-4px">GET IN SHAPE</button>
+               <div class="overflow-hidden">
+                  <div class="col-img invisible bnf-ltr">
+                     <img src="<?= base_url('assets/images/landing/benefit-3.jpg'); ?>" alt="rejuvis mct benefit">
+                     <button class="btn-benefit text-uppercase text-space-4px">GET IN SHAPE</button>
+                  </div>
                </div>
             </div>
          </div>
@@ -319,13 +335,14 @@
          <div class="row tiptrick-body">
             <div class="col-md-6">
                <div class="col-img">
-                  <img src="<?= base_url('assets/images/landing/tiptrick-img.png'); ?>" alt="rejuvis mct oil">
+                  <img src="<?= base_url('assets/images/landing/tiptrick-img.png'); ?>" alt="rejuvis mct oil" class="hide-767">
+                  <img src="<?= base_url('assets/images/landing/tiptrick-img-mobile.png'); ?>" alt="rejuvis mct oil" class="show-767">
                </div>
             </div>
             <div class="col-md-6 position-relative">
                <div class="col-desc">                  
                   <div class="position-absolute top-50 translate-middle-y">
-                     <h4>กินอย่างไรให้เห็นผลภายใน 1 สัปดาห์</h4>
+                     <h4 class="fw-600">กินอย่างไรให้เห็นผลภายใน 1 สัปดาห์</h4>
                      <div class="line-pink-30 mtb-1rem"></div>
                      <ul>
                         <li>ทาน 1-2 ช้อนโต๊ะ ทุกวัน ทานได้ทันที หรือใช้ผสมเครื่องดื่มต่างๆ / อาหาร</li>
@@ -387,7 +404,7 @@
             </div>
             <div class="col-md-8 position-relative">
                <div class="col-form position-absolute">
-                  <div class="text-center">
+                  <div class="text-center form-title">
                      <strong class="d-block text-uppercase">ซื้อครั้งแรกรับส่วนลด 50 บาท</strong>
                      <div class="line-pink-30 mtb-1rem-auto"></div>
                   </div>

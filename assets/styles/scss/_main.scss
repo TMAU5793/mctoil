@@ -1,14 +1,43 @@
 section.banner {
+    @include media-max(576px) {
+        display: grid;
+    }
+    .baner-img {
+        @include media-max(767px) {
+            height: 50vh;
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        @include media-max(576px) {
+            height: auto;
+            order: 2;
+        }
+    }
     .banner-text {
         left: 0;
         right: 0;
+        @include media-max(576px) {
+            order: 1;
+            position: relative !important;
+            transform: none !important;
+            top: 0 !important;
+            text-align: center;
+            margin: 4rem 0 2rem;
+        }
     }
     .mct-oil-logo {
         img {
             max-width: 390px;
-        }
-        @include media-max(991px) {
-            img {
+            @include media-max(991px) {
+                max-width: 300px;
+            }
+            @include media-max(767px) {
+                max-width: 200px;
+            }
+            @include media-max(576px) {
                 max-width: 300px;
             }
         }
@@ -23,9 +52,20 @@ section.banner {
             }
         }
     }
-    @include media-max(991px) {
-        .max-w-400 {
+    .max-w-400 {
+        @include media-max(991px) {
             max-width: 330px;
+        }
+        @include media-max(767px) {
+            max-width: 280px;
+        }
+        @include media-max(576px) {
+            max-width: 100%;
+            span.fs-3 {
+                display: block;
+                text-align: left;
+                padding-left: .85rem;
+            }
         }
     }
 }
@@ -38,6 +78,15 @@ section.mct-vdo {
     @include media-max(1400px) {
         background-size: 100%, 10%, 10%;
     }
+    @include media-max(576px) {
+        background-size: 0, 25%, 25%;
+        overflow: hidden;
+    }
+    .container {
+        @include media-max(576px) {
+            padding: 0;
+        }
+    }
     .vdo-body {
         img {
             max-width: 600px;
@@ -46,10 +95,57 @@ section.mct-vdo {
         }
     }
     .vdo-desc {
+        @include media-max(576px) {
+            .col-md-4 {
+                order: 1;
+                text-align: left !important;
+                padding: 0 2.5rem;
+            }
+            .col-12 {
+                order: 2;
+                background: linear-gradient(0deg, $c-pink 100px, rgba(0, 0, 0, 0) 100px);
+                padding-bottom: 2rem;
+                .vdo-body {
+                    padding: 0 1.5rem;
+                }
+            }
+            .col-md-8 {
+                order: 3;
+                padding: 0 2.5rem;
+            }
+        }
         .col-md-4 {
             strong {
                 display: block;
                 letter-spacing: 4px;
+            }
+            @include media-max(767px) {
+                text-align: center;
+                .line-pink-30 {
+                    margin: 1rem auto;
+                }
+            }
+            @include media-max(576px) {
+                .line-pink-30 {
+                    margin: 1rem 0;
+                }
+                strong {
+                    font-size: 2rem;
+                    letter-spacing: 6px;
+                    line-height: 3rem;
+                }
+            }
+        }
+        .col-md-8 {
+            @include media-max(767px) {
+                .btn-discount {
+                    text-align: center !important;
+                }
+            }
+            @include media-max(576px) {
+                .btn-discount {
+                    margin-top: 3rem;
+                }
             }
         }
     }
@@ -58,6 +154,22 @@ section.mct-vdo {
 section.mct-compare {
     background-color: #f9faf9;
     padding: 3rem 0 0;
+    @include media-max(576px) {
+        overflow: hidden;
+    }
+    .compare-head {
+        @include media-max(576px) {
+            text-align: left !important;
+            strong {
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 6px;
+            }
+            .line-pink-30 {
+                margin: 1rem 0 1.5rem;
+            }
+        }
+    }
     .compare-body {
         background-image: url('../../images/landing/bg-compare.jpg');
         background-repeat: no-repeat;
@@ -67,6 +179,31 @@ section.mct-compare {
         @include media-max(1400px) {
             background-size: contain;
             background-position: center bottom;
+        }
+        @include media-max(767px) {
+            background-size: contain;
+            background-position: center;
+        }
+        @include media-max(576px) {
+            background: transparent;
+            margin-top: 3rem;
+        }
+        .bg-mobile-top {
+            @include media-max(576px) {
+                background-image: url('../../images/landing/bg-compare-top.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0 -8%;
+            }
+        }
+        .normal-product.show-767 {
+            @include media-max(576px) {
+                background-image: url('../../images/landing/bg-compare-bottom.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center bottom;
+                margin: 0 -8%;
+            }
         }
     }
     .compare-product {
@@ -85,6 +222,22 @@ section.mct-compare {
             }
             .col-md-6.ps-5 {
                 padding-left: 1.5rem !important;
+            }
+        }
+        @include media-max(991px) {
+            .col-md-6.pe-5,
+            .col-md-6.ps-5 {
+                padding: .5rem !important;
+            }
+        }
+        .col-12.mt-5 {
+            @include media-max(767px) {
+                margin-top: 1.5rem !important;
+            }
+            @include media-max(767px) {
+                .btn-discount {
+                    margin-top: 1rem;
+                }
             }
         }
         ul {
@@ -112,8 +265,31 @@ section.mct-compare {
                 right: -3rem;
                 transform: translateY(-50%);
             }
+            @include media-max(767px) {
+                text-align: left !important;
+                ul {
+                    padding-right: 1.5rem;
+                    padding-left: 4rem;
+                }
+                li::after {
+                    content: none;
+                }
+                li::before {
+                    content: '';
+                    background-image: url('../../images/landing/i-checked.png');
+                    width: 28px;
+                    height: 19px;
+                    position: absolute;
+                    top: 50%;
+                    left: -2.75rem;
+                    transform: translateY(-50%);
+                }
+            }
         }
         .normal-mct {
+            @include media-max(767px) {
+                margin-top: 1.5rem;
+            }
             ul {
                 padding-left: 4rem;
             }
@@ -124,8 +300,13 @@ section.mct-compare {
                 height: 3px;
                 position: absolute;
                 top: 50%;
-                left: -2.5rem;
+                left: -2.75rem;
                 transform: translateY(-50%);
+            }
+            .compare-product {
+                @include media-max(576px) {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
@@ -135,6 +316,9 @@ section.mct-compare {
         border-radius: 10px;
         border: 1px solid $c-pink;
         height: 100%;
+        @include media-max(767px) {
+            height: auto;
+        }
         .mct-box-title {
             background-color: $c-white;
             color: $c-black;
@@ -154,10 +338,23 @@ section.mct-benefit {
     @include media-max(1400px) {
         background-size: 15%, 15%;
     }
+    @include media-max(576px) {
+        background: linear-gradient(0deg, #f5f5f5 80%, rgba(0, 0, 0, 0) 80%);
+        .col-12.mt-5 {
+            margin-top: 2rem !important;
+        }
+    }
     .col-md-4 {
         padding: 0 2rem;
         @include media-max(991px) {
             padding: 0 1rem;
+        }
+    }
+    .benefit-head {
+        @include media-max(576px) {
+            strong {
+                font-size: 2rem;
+            }
         }
     }
     .benefit-body-img {
@@ -170,10 +367,19 @@ section.mct-benefit {
                 transform: translateX(-50%);
             }
         }
+        @include media-max(576px) {
+            margin: 0 -25px;
+            .col-md-4 {
+                padding: 0;
+            }
+        }
     }
     .benefit-body-desc {
         .col-md-4 {
             margin-top: 3rem;
+            h4 {
+                font-weight: 600;
+            }
         }
         .col-img-icon {
             width: 74px;
@@ -200,6 +406,25 @@ section.mct-whyour {
             bottom: -1rem;
             background-size: 60%;
         }
+        @include media-max(767px) {
+            background-size: 40%;
+        }
+        @include media-max(576px) {
+            background-size: 25%;
+        }
+    }
+    .whyour-head {
+        @include media-max(576px) {
+            text-align: left !important;
+            strong {
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 6px;
+            }
+            .line-pink-30 {
+                margin: 1rem 0 .5rem !important;
+            }
+        }
     }
     .whyour-body {
         .col-md-6 {
@@ -207,6 +432,7 @@ section.mct-whyour {
             .col-body {
                 h4 {
                     margin-top: 1rem;
+                    font-weight: 600;
                 }
                 ul {
                     list-style: none;
@@ -234,6 +460,19 @@ section.mct-review {
     background: -moz-linear-gradient(7deg, #ef476a 25%, rgba(0, 0, 0, 0) 25%), -moz-linear-gradient(7deg, #ffb5c4 59%, #f5f5f5 59%);
     background: linear-gradient(7deg, #ef476a 25%, rgba(0, 0, 0, 0) 25%), linear-gradient(7deg, #ffb5c4 59%, #f5f5f5 59%);
     padding: 3rem 0 6rem;
+    .review-head {
+        @include media-max(576px) {
+            text-align: left !important;
+            strong {
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 6px;
+            }
+            .line-pink-30 {
+                margin: 1rem 0 .5rem !important;
+            }
+        }
+    }
     .vdo-review {
         .col-md-4 {
             margin-top: 1.5rem;
@@ -251,6 +490,9 @@ section.mct-review {
                 font-size: 1.2rem;
                 line-height: 1.25rem;
             }
+            h4 {
+                font-weight: 600;
+            }
         }
     }
     .people-review {
@@ -267,6 +509,14 @@ section.mct-review {
                     font-size: 1.2rem;
                     line-height: 1.25rem;
                 }
+                h4 {
+                    font-weight: 600;
+                }
+            }
+        }
+        @include media-max(767px) {
+            .col-md-4:not(:last-child) {
+                margin-bottom: 1.5rem;
             }
         }
     }
@@ -277,6 +527,22 @@ section.mct-tiptrick {
     background-repeat: no-repeat;
     background-position: bottom center;
     padding: 3rem 0 0;
+    @include media-max(767px) {
+        background-position: center;
+    }
+    .tiptrick-head {
+        @include media-max(576px) {
+            text-align: left !important;
+            strong {
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 6px;
+            }
+            .line-pink-30 {
+                margin: 1rem 0 .5rem !important;
+            }
+        }
+    }
     .tiptrick-body {
         .col-md-6 {
             position: relative;
@@ -291,6 +557,17 @@ section.mct-tiptrick {
                 bottom: 0;
                 right: 2rem;
             }
+            @include media-max(767px) {
+                position: relative;
+                bottom: unset;
+                right: unset;
+                text-align: center;
+                margin-top: 2rem;
+                img {
+                    max-width: 350px;
+                    margin: auto;
+                }
+            }
         }
         .col-desc {
             .position-absolute {
@@ -304,15 +581,39 @@ section.mct-tiptrick {
                     transform: none !important;
                 }
             }
+            @include media-max(576px) {
+                .position-absolute {
+                    left: unset;
+                }
+            }
         }
     }
 }
 
 section.mct-delivery {
     padding: 3rem 0;
+    .delivery-head {
+        @include media-max(576px) {
+            text-align: left !important;
+            strong {
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 6px;
+            }
+            .line-pink-30 {
+                margin: 1rem 0 1.5rem !important;
+            }
+        }
+    }
     .delivery-body {
         border-radius: 10px;
         padding: 2.5rem 0;
+        @include media-max(767px) {
+            padding: 2rem;
+        }
+        @include media-max(576px) {
+            margin: 0 !important;
+        }
         .col-img {
             text-align: center;
             color: $c-white;
@@ -333,6 +634,14 @@ section.mct-delivery {
         }
         .col-md-4:not(:last-child) {
             border-right: 1px solid $c-white;
+            @include media-max(767px) {
+                border-right: none;
+                .col-img {
+                    border-bottom: 1px solid $c-white;
+                    padding-bottom: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
         }
     }
 }
@@ -346,12 +655,35 @@ section.mct-promotion {
     @include media-max(1399px) {
         background-size: contain;
     }
+    @include media-max(576px) {
+        background-image: url('../../images/landing/bg-promotion-mobile.jpg');
+        background-position: top center;
+    }
+    .promotion-head {
+        @include media-max(576px) {
+            text-align: left !important;
+            strong {
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 6px;
+            }
+            .line-pink-30 {
+                margin: 1rem 0 1.5rem !important;
+            }
+        }
+    }
     .promotion-body {
         background-color: $c-white;
+        @include media-max(576px) {
+            margin: 0 !important;
+        }
         [class*='col-md-'] {
             padding: 0;
             @include media-max(991px) {
                 width: 50%;
+            }
+            @include media-max(576px) {
+                width: 100%;
             }
         }
         .col-md-4 {
@@ -387,6 +719,14 @@ section.mct-promotion {
                 @include media-max(991px) {
                     width: auto;
                     padding: 2rem;
+                }
+                .form-title {
+                    @include media-max(576px) {
+                        text-align: left !important;
+                        .line-pink-30 {
+                            margin: 1rem 0 1.5rem !important;
+                        }
+                    }
                 }
                 form {
                     .form-control {
