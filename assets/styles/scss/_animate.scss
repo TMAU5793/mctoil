@@ -58,7 +58,8 @@
     }
 }
 
-[id*="waypoint"] {
+[id*="waypoint"],
+[class*="-wpt"] {
     animation-duration: 1s;
 }
 

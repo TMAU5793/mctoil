@@ -46,3 +46,24 @@ var waypoints = $('.bnf-ltr').waypoint(function() {
 }, {
     offset: '70%'
 });
+
+var waypoints = $('.whyour-wpt').waypoint(function() {
+    $('.whyour-wpt').removeClass('invisible');
+    $('.whyour-wpt').addClass('left-to-right');
+}, {
+    offset: '70%'
+});
+
+var waypoints = $('.vdo-ltr-wpt').waypoint(function() {
+    $('.vdo-ltr-wpt').removeClass('invisible');
+    $('.vdo-ltr-wpt').addClass('left-to-right');
+}, {
+    offset: '70%'
+});
+
+var waypoints = $('.vdo-rtl-wpt').waypoint(function() {
+    $('.vdo-rtl-wpt').removeClass('invisible');
+    $('.vdo-rtl-wpt').addClass('right-to-left');
+}, {
+    offset: '70%'
+});

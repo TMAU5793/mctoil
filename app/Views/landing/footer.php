@@ -5,6 +5,7 @@
    <script src="<?= base_url('assets/jquery/jquery.min.js'); ?>"></script>
    <script src="<?= base_url('assets/bootstrap-5/js/bootstrap.min.js'); ?>"></script>
    <script src="<?= base_url('assets/waypoints/jquery.waypoints.min.js'); ?>"></script>
+   <script src="<?= base_url('assets/jquery/jquery.validate.js'); ?>"></script>
    
    <script>
       $(document).ready(function () {
@@ -13,6 +14,9 @@
          
          // Load waypoint script
          <?= view('scripts/waypoints'); ?>
+
+         // Load validate script
+         <?= view('scripts/validate'); ?>
       });
    </script>
 

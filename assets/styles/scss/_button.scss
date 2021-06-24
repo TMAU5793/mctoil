@@ -1,6 +1,7 @@
 .btn-discount {
     img {
         width: 200px;
+        cursor: pointer;
     }
     @include media-max(991px) {
         img {
@@ -15,10 +16,7 @@
     outline: none;
     color: $c-white;
     padding: 4px 6px 1px;
-    &:hover {
-        background-color: $c-white;
-        color: $c-black;
-    }
+    cursor: auto !important;
 }
 
 .submit-discount {
