@@ -412,7 +412,7 @@
                      <strong class="d-block text-uppercase">ซื้อครั้งแรกรับส่วนลด 50 บาท</strong>
                      <div class="line-pink-30 mtb-1rem-auto"></div>
                   </div>
-                  <form id="frmDiscount" action="">
+                  <form id="frmDiscount" enctype="multipart/form-data">
                      <div class="input-group">
                         <div class="form-icon"><img src="<?= base_url('assets/images/landing/i-input-user.png'); ?>" alt="mct oil promotion"></div>
                         <input type="text" class="form-control" id="txt_name" name="txt_name" placeholder="ชื่อ - นามสกุล">
@@ -430,7 +430,7 @@
                         <input type="email" class="form-control" id="txt_email" name="txt_email" placeholder="อีเมล">
                      </div>
                      <div class="input-group">
-                        <button type="submit" id="submit_discount" class="m-auto submit-discount text-space-4px">SUBMIT</button>
+                        <button type="button" id="submit_discount" class="m-auto submit-discount text-space-4px">SUBMIT</button>
                      </div>
                   </form>
                </div>

@@ -4,15 +4,26 @@ $('#submit_discount').on('click', function() {
         $('#frmDiscount input').parents('.input-group').addClass('error');
         $('.promotion-body').css({ 'padding': '3rem 0' });
     } else {
-        // $.ajax({
-        //     type: "POST",
-        //     url: "<?= base_url('download/create'); ?>",
-        //     data: $(form).serialize(),
-        //     success: function(response) {
-
-        //     }
-        // });
-        $("#frmDiscount").submit();
+        $.ajax({
+            type: "POST",
+            url: "<?= base_url('landing/register'); ?>",
+            data: $("#frmDiscount").serialize(),
+            success: function(response) {
+                console.log(response);
+                var html = "";
+                html += '<div class="modal mct-modal-success" id="mctModal">';
+                html += '<div class="modal-dialog">';
+                html += '<div class="modal-content">';
+                html += '<div class="modal-header">';
+                html += '<h4 class="modal-title">Modal Heading</h4>';
+                html += '<button type="button" class="close" data-dismiss="modal">&times;</button></div>';
+                html += '<div class="modal-body"></div>';
+                html += '<div class="modal-footer">';
+                html += '<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>';
+                html += '</div></div></div></div>';
+                $('footer').append(html);
+            }
+        });
     }
 });
 
