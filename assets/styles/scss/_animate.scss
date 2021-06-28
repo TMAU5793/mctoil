@@ -67,3 +67,25 @@
 .animate-bnf-ltr {
     animation-duration: 2s;
 }
+
+.loader {
+    display: none;
+    margin: auto;
+    border: 10px solid #393d3b;
+    border-radius: 50% !important;
+    border-top: 10px solid $c-pink;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

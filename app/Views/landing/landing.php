@@ -431,6 +431,7 @@
                      </div>
                      <div class="input-group">
                         <button type="button" id="submit_discount" class="m-auto submit-discount text-space-4px">SUBMIT</button>
+                        <div class="loader m-auto"></div>
                      </div>
                   </form>
                </div>

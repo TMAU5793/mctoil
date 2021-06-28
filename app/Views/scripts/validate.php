@@ -1,5 +1,7 @@
 $('#submit_discount').on('click', function() {
     var validator = $("#frmDiscount").valid();
+    $('#submit_discount').hide();
+    $('.loader').show();
     if (!validator) {
         $('#frmDiscount input').parents('.input-group').addClass('error');
         $('.promotion-body').css({ 'padding': '3rem 0' });
@@ -9,19 +11,31 @@ $('#submit_discount').on('click', function() {
             url: "<?= base_url('landing/register'); ?>",
             data: $("#frmDiscount").serialize(),
             success: function(response) {
-                console.log(response);
-                var html = "";
-                html += '<div class="modal mct-modal-success" id="mctModal">';
-                html += '<div class="modal-dialog">';
-                html += '<div class="modal-content">';
-                html += '<div class="modal-header">';
-                html += '<h4 class="modal-title">Modal Heading</h4>';
-                html += '<button type="button" class="close" data-dismiss="modal">&times;</button></div>';
-                html += '<div class="modal-body"></div>';
-                html += '<div class="modal-footer">';
-                html += '<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>';
-                html += '</div></div></div></div>';
-                $('footer').append(html);
+                if (response) {
+                    var html = "";
+                    html += '<div class="modal fade mct-modal-success" id="mctModal">';
+                    html += '<div class="modal-dialog modal-dialog-centered">';
+                    html += '<div class="modal-content">';
+                    html += '<div class="modal-header">';
+                    html += '<h4 class="modal-title m-auto fw-600">การลงทะเบียนเรียบร้อย</h4>';
+                    html += '</div><div class="modal-body pt-4 pb-4">';
+                    html += '<h4>การลงทะเบียนรับส่วนลดของคุณเรียบร้อยแล้ว <br> ขอบคุณค่ะ</h4>';
+                    html += '<div style="max-width:200px; margin:1.5rem auto;"><img src="<?= base_url("assets/images/mct-oil-logo.png"); ?>" alt="mct oil logo"></div>';
+                    html += '</div></div></div></div>';
+                    $('footer').append(html);
+                    $('#mctModal').modal('show');
+
+                    //form reset data
+                    $("#frmDiscount")[0].reset();
+                    $('#submit_discount').show();
+                    $('.loader').hide();
+
+                    setTimeout(function() {
+                        $('#mctModal').modal('hide');
+                    }, 3000);
+                } else {
+                    $("#frmDiscount")[0].reset();
+                }
             }
         });
     }
