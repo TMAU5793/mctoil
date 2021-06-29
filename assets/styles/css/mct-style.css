@@ -602,10 +602,13 @@ section.mct-review {
       font-weight: 600; }
   section.mct-review .people-review .col-body {
     background-color: #ffffff;
-    padding: 1.5rem 2rem; }
+    padding: 1.5rem 2rem;
+    height: 100%; }
     section.mct-review .people-review .col-body .col-img {
       max-width: 234px;
-      margin: 0 auto 1rem; }
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden; }
     section.mct-review .people-review .col-body .col-desc p {
       margin-bottom: 0;
       font-size: 1.2rem;

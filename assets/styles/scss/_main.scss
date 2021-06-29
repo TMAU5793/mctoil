@@ -534,9 +534,12 @@ section.mct-review {
         .col-body {
             background-color: $c-white;
             padding: 1.5rem 2rem;
+            height: 100%;
             .col-img {
                 max-width: 234px;
                 margin: 0 auto 1rem;
+                border-radius: 50%;
+                overflow: hidden;
             }
             .col-desc {
                 p {
