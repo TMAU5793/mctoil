@@ -116,6 +116,20 @@ footer {
 .btn-discount img {
   width: 200px;
   cursor: pointer; }
+.btn-discount .btn-order {
+  display: inline-block;
+  background: #ef476a;
+  background: linear-gradient(0deg, #ef476a 0%, #ff8ea5 100%);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: .8rem .5rem .5rem;
+  width: 150px;
+  font-size: 1.75rem;
+  text-align: center;
+  text-decoration: none; }
+  .btn-discount .btn-order:hover {
+    box-shadow: 4px 5px 4px #e0143e; }
 @media (max-width: 991px) {
   .btn-discount img {
     width: 150px; } }

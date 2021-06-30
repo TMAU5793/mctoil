@@ -12,7 +12,8 @@
             </div>
             <p>มากกว่าน้ำมันมะพร้าวสกัดเย็นด้วยนวัตกรรมใหม่ เผาผลาญมากกว่า 70% ที่สุดของการเบิร์นไขมัน</p>
             <div class="banner-discount btn-discount">
-               <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
+               <!-- <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount"> -->
+               <a href="https://lin.ee/il9j8PZ" target="_blank" class="btn-order">สั่งซื้อ</a>
             </div>
          </div>
       </div>
@@ -39,7 +40,8 @@
             <div class="col-md-8">
                <p>Rejuvis MCT Oil เกิดจากการสะกัดน้ำมันมะพร้าวออแกนิค 100% ที่คัดแยกนำเฉพาะ Capryilic acid C8 และ Capric acid C10 เท่านั้น และไม่มีส่วนผสมของน้ำมันปาล์ม เพื่อให้ได้คุณสมบัติที่ดีที่สุดกลายมาเป็น MCT Oil เพื่อให้ในทุกช่วงเวลาของคุณนำไขมันมาใช้เป็นพลังงานได้ดีขึ้นและมีประสิทธิภาพมากที่สุด ที่สำคัญไม่มีสารตกค้าง หรือสารโลหะหนักแต่อย่างใด จึงมั่นใจได้ว่าทุกหยดที่คุณดื่มปลอดภัยและสามารถบริโภคได้ทุกคน</p>
                <div class="btn-discount text-end invisible" id="waypoint3">
-                  <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
+                  <!-- <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount"> -->
+                  <a href="https://lin.ee/il9j8PZ" target="_blank" class="btn-order">สั่งซื้อ</a>
                </div>
             </div>
          </div>
@@ -99,7 +101,8 @@
                </div>
                <div class="col-12 mt-5">
                   <div class="btn-discount text-center">
-                     <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
+                     <!-- <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount"> -->
+                     <a href="https://lin.ee/il9j8PZ" target="_blank" class="btn-order">สั่งซื้อ</a>
                   </div>
                </div>
             </div>
@@ -185,7 +188,8 @@
             </div>
             <div class="col-12 mt-5">
                <div class="btn-discount text-center">
-                  <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount">
+                  <!-- <img src="<?= base_url('assets/images/landing/discount-50.jpg'); ?>" alt="mct oil discount"> -->
+                  <a href="https://lin.ee/il9j8PZ" target="_blank" class="btn-order">สั่งซื้อ</a>
                </div>
             </div>
          </div>
@@ -409,7 +413,7 @@
             <div class="col-md-8 position-relative">
                <div class="col-form position-absolute">
                   <div class="text-center form-title">
-                     <strong class="d-block text-uppercase">ซื้อครั้งแรกรับส่วนลด 50 บาท</strong>
+                     <strong class="d-block text-uppercase">ลงทะเบียนเพื่อรับข้อมูลข่าวสาร</strong>
                      <div class="line-pink-30 mtb-1rem-auto"></div>
                   </div>
                   <form id="frmDiscount" enctype="multipart/form-data">
