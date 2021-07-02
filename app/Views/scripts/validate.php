@@ -5,6 +5,8 @@ $('#submit_discount').on('click', function() {
     if (!validator) {
         $('#frmDiscount input').parents('.input-group').addClass('error');
         $('.promotion-body').css({ 'padding': '3rem 0' });
+        $('#submit_discount').show();
+        $('.loader').hide();
     } else {
         $.ajax({
             type: "POST",
