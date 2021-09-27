@@ -34,6 +34,18 @@ class Landing extends BaseController
 			}else{
 				echo true;
 			}
+		}else{
+			return redirect()->to(base_url());
 		}
+	}
+
+	public function listing()
+	{
+		// $mctModel = new MctModel;
+		// $result = $mctModel->getData('tbl_mctoil');
+		// print_r($result);
+		$db = \Config\Database::connect('default', true);
+		//$db = db_connect();
+		print_r($db);
 	}
 }
